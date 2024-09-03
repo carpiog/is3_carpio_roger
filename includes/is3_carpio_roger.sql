@@ -55,8 +55,34 @@ INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat
 VALUES('2024-09-07', 7, 14.6349, -90.5069, 14.6183, -90.4999, 'En Ruta');
 INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
 VALUES('2024-09-08', 8, 14.6349, -90.5069, 14.5718, -90.5269, 'En Bodega');
-
-
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-01', 1, 14.6349, -90.5069, 14.5553, -90.7334, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-01', 1, 14.6349, -90.5069, 14.5453, -90.7485, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-02', 1, 14.6349, -90.5069, 14.6349, -90.5069, 'En Bodega');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-02', 2, 14.6349, -90.5069, 14.6050, -90.5133, 'En Bodega');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-03', 3, 14.6349, -90.5069, 14.6397, -90.5133, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-03', 3, 14.6349, -90.5069, 14.6271, -90.5353, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-04', 3, 14.6349, -90.5069, 14.6460, -90.5067, 'Entregado');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-04', 4, 14.6349, -90.5069, 14.6550, -90.4900, 'Entregado');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-05', 4, 14.6349, -90.5069, 14.5833, -90.4514, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-05', 4, 14.6349, -90.5069, 14.5710, -90.4600, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-06', 6, 14.6349, -90.5069, 14.5784, -90.6532, 'Entregado');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-06', 6, 14.6349, -90.5069, 14.5800, -90.6700, 'Entregado');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-07', 6, 14.6349, -90.5069, 14.6183, -90.4999, 'En Ruta');
+INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat, destino_lng, estado) 
+VALUES ('2024-09-07', 7, 14.6349, -90.5069, 14.6200, -90.4850, 'En Ruta');
 
 
 CREATE TABLE camiones (
@@ -105,6 +131,12 @@ CREATE TABLE permiso (
 INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES (1, 1);
 INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES(2, 2);
 INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES(3, 3);
+
+SELECT u.nombre, COUNT(e.usuario_id) AS cantidad_envios
+FROM envios e
+JOIN usuarios u ON e.usuario_id = u.usuario_id
+GROUP BY u.nombre
+ORDER BY cantidad_envios DESC;
 
 
 

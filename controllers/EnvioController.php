@@ -4,7 +4,6 @@ namespace Controllers;
 
 use Exception;
 use Model\Envio;
-use Model\Producto;
 use MVC\Router;
 
 class EnvioController
