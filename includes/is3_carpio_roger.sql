@@ -85,6 +85,7 @@ INSERT INTO envios (fecha_envio, usuario_id, origen_lat, origen_lng, destino_lat
 VALUES ('2024-09-07', 7, 14.6349, -90.5069, 14.6200, -90.4850, 'En Ruta');
 
 
+
 CREATE TABLE camiones (
     camion_id SERIAL PRIMARY KEY,
     placa VARCHAR(20),
@@ -120,6 +121,22 @@ INSERT INTO envio_camion (envio_id, camion_id, fecha_salida, fecha_llegada) VALU
 INSERT INTO envio_camion (envio_id, camion_id, fecha_salida, fecha_llegada) VALUES(7, 7, '2024-09-07', '2024-09-08');
 INSERT INTO envio_camion (envio_id, camion_id, fecha_salida, fecha_llegada) VALUES(8, 8, '2024-09-08', '2024-09-09');
 
+
+SELECT 
+        usuarios.usuario_id, 
+        usuarios.nombre, 
+        usuarios.password, 
+        usuarios.email, 
+        roles.rol_nombre
+    FROM 
+        permiso
+    INNER JOIN 
+        usuarios ON permiso.permiso_usuario = usuarios.usuario_id
+    INNER JOIN 
+        roles ON permiso.permiso_rol = roles.rol_id
+    WHERE 
+        usuarios.email = :email;
+
 CREATE TABLE permiso (
     permiso_id SERIAL PRIMARY KEY,
     permiso_usuario INTEGER,
@@ -132,11 +149,7 @@ INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES (1, 1);
 INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES(2, 2);
 INSERT INTO permiso (permiso_usuario, permiso_rol) VALUES(3, 3);
 
-SELECT u.nombre, COUNT(e.usuario_id) AS cantidad_envios
-FROM envios e
-JOIN usuarios u ON e.usuario_id = u.usuario_id
-GROUP BY u.nombre
-ORDER BY cantidad_envios DESC;
+
 
 
 

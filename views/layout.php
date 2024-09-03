@@ -28,7 +28,7 @@
                     </li>
   
                     <div class="nav-item dropdown " >
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="/is3_carpio_roger" data-bs-toggle="dropdown">
                             <i class="bi bi-gear me-2"></i>Usuario Normal
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
@@ -38,7 +38,7 @@
                         </ul>
                     </div>
                     <div class="nav-item dropdown " >
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle" href="/is3_carpio_roger" data-bs-toggle="dropdown">
                             <i class="bi bi-gear me-2"></i>Usuario Administrativo
                         </a>
                         <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
@@ -49,7 +49,23 @@
                                 <a class="dropdown-item nav-link text-white " href="/is3_carpio_roger/mapa"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Mapa de Envios</a>
                             </li>
                         </ul>
-                    </div>  
+                    </div>
+                    <div class="nav-item dropdown " >
+                        <a class="nav-link dropdown-toggle" href="/is3_carpio_roger" data-bs-toggle="dropdown">
+                            <i class="bi bi-gear me-2"></i>Usuario Administrador
+                        </a>
+                        <ul class="dropdown-menu  dropdown-menu-dark "id="dropwdownRevision" style="margin: 0;">
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/is3_carpio_roger/envio"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Envios</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/is3_carpio_roger/envio/estadistica"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Estadistica de Envios</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item nav-link text-white " href="/is3_carpio_roger/mapa"><i class="ms-lg-0 ms-2 bi bi-plus-circle me-2"></i>Mapa de Envios</a>
+                            </li>
+                        </ul>
+                    </div>    
 
                 </ul> 
                 <div class="col-lg-1 d-grid mb-lg-0 mb-2">

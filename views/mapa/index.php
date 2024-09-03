@@ -6,15 +6,12 @@
         <div class="d-flex justify-content-around">
             <div>
                 <span class="badge bg-warning text-dark">En Ruta</span>
-                <span> - En Ruta</span>
             </div>
             <div>
                 <span class="badge bg-success">Entregado</span>
-                <span> - Entregado</span>
             </div>
             <div>
                 <span class="badge bg-danger text-light">En Bodega</span>
-                <span> - En Bodega</span>
             </div>
         </div>
     </div>
